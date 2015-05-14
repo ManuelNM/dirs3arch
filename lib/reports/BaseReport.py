@@ -40,7 +40,7 @@ class BaseReport(object):
         self.pathList.append((path, status, contentLength))
 
     def open(self):
-        self.file = open(self.output, 'w+')
+        self.file = open(self.output, 'a+')
 
     def save(self):
         self.file.writelines(self.generate())
